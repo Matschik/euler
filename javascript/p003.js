@@ -5,44 +5,11 @@ What is the largest prime factor of the number 600851475143 ?
 
 */
 
-
-function isPrime(n) {
-
-    if(n <= 1) {
-        return false
-    } else if(n <= 3) {
-        return true;
-    } else if(n % 2 === 0 || n % 3 === 0) {
-        return false;
-    }
-
-    let i = 5;
-    while(i*i <= n) {
-        if(n % i === 0 || n % (i+2) === 0) {
-            return false;
-        }
-        i = i + 6;
-    }
-
-    return true;
-}
-
-
-function getPrimeNumbers(limit) {
-    let primeNumbers = [];
-
-    for(i = 0; i < 10000; i++) {
-        if(isPrime(i)) {
-            primeNumbers.push(i);
-        }
-    }
-
-    return primeNumbers;
-}
+const helpers = require('./helpers')
 
 function largestPrimeFactor(nb) {
     let largest;
-    let primeNumbers = getPrimeNumbers(nb);
+    let primeNumbers = helpers.getPrimeNumbers(10000);
     const lastPrime = primeNumbers[primeNumbers.length - 1];
 
     for(i = lastPrime; i > 0; i--) {
