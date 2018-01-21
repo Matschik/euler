@@ -45,7 +45,7 @@ function largestProductAdjacent(nbAdjacent) {
             arr.push(digit1000[i])
         }
         
-        if(arr.length === 13){ 
+        if(arr.length === nbAdjacent){ 
             product = arr.reduce((acc, cur) => acc * cur)
             if(product > largest) {
                 largest = product

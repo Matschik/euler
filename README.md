@@ -1,7 +1,7 @@
 # Project Euler Solutions
 
 ## Status
-005/667 problems completed
+008/667 problems completed
 
 ## Answers
 
